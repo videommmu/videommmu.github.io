@@ -283,15 +283,19 @@
 			</p>
 			<p class="description text-left">
 				<strong>1) Knowledge-intensive Video Collection:</strong><br>
-				Our dataset comprises 300 expert-level videos spanning 6 professional disciplines: Art, Business, Science, Medicine, Humanities, and Engineering, with 30 subjects distributed among them.
+				Our dataset comprises 300 lecture-style videos spanning 6 professional disciplines: Art, Business, Science, Medicine, Humanities, and Engineering, with 30 subjects distributed among them.
 			</p>
 			<p class="description text-left">
 				<strong>2) Knowledge Acquisition-based Question Design:</strong><br>
 				Each video includes three question-answer pairs aligned with the three knowledge acquisition stages: Perception (identifying key information related to the knowledge), Comprehension (understanding the underlying concepts), and Adaptation (applying knowledge to new scenarios).
 			</p>
 			<p class="description text-left">
-				<strong>3) Quantitative Knowledge Acquisition Assessment:</strong><br>
-				We propose a knowledge acquisition metric, denoted as <i>&Delta;<sub>knowledge</sub></i>, to measure performance gains on practice exam questions after learning from videos. This metric enables us to quantitatively evaluate how effectively large multimodal models (LMMs) can assimilate and utilize the information presented in the videos to solve real-world, novel problems.
+				<strong>3) Videos as a Knowledge Source</strong><br>
+				Traditional VideoQA benchmarks focus primarily on evaluating how well models interpret visual content. Video-MMMU is the first to treat videos as a <strong>source of knowledge</strong>, assessing how effectively LMMs acquire knowledge from educational videos.
+			</p>
+			<p class="description text-left">
+				<strong>4) Measuring Knowledge Gain: The Δknowledge Metric</strong><br>
+				A key novelty of Video-MMMU is that it evaluates not just a model’s absolute accuracy but also its <strong>delta accuracy</strong>—the improvement in performance after learning from a video. A model may initially fail to solve an exam question, but we give the model a video where a human could learn to solve the question by watching the video. Video-MMMU tests how well LMMs <strong>improve their performance</strong> after watching the videos. Video-MMMU introduces <strong>Δknowledge</strong> to quantify knowledge gain by evaluating a model’s improvement on practice exam questions (Adaptation track) after watching a video.
 			</p>
 			<br>
 			<div class="image-viewer" style="margin-top: 20px; text-align: center;">
