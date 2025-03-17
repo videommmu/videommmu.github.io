@@ -264,11 +264,11 @@
 			<h1 class="text-center">Abstract</h1>
 			<br>
 			<p class="description text-left">
-				Humans acquire knowledge through three cognitive stages: perceiving information, comprehending knowledge, and adapting knowledge to solve novel problems. Videos serve as an effective medium for this learning process, facilitating a progression through these cognitive stages. However, existing video benchmarks fail to systematically evaluate the <i>knowledge acquisition</i> capabilities in Large Multimodal Models (LMMs). To address this gap, we introduce <strong>Video-MMMU</strong>, a multi-modal, multi-disciplinary benchmark designed to assess LMMs' ability to acquire and utilize knowledge from videos. Video-MMMU features a curated collection of 300 expert-level videos and 900 human-annotated questions across six disciplines, evaluating <i>knowledge acquisition</i> through stage-aligned question-answer pairs: Perception, Comprehension, and Adaptation. A proposed knowledge gain metric, &Delta;<sub>knowledge</sub>, quantifies improvement in performance after video viewing. Evaluation of LMMs reveals a steep decline in performance as cognitive demands increase and highlights a significant gap between human and model knowledge acquisition, underscoring the need for methods to enhance LMMs' capability to learn and adapt from videos.
+				Humans acquire knowledge through three cognitive stages: perceiving information, comprehending knowledge, and adapting knowledge to solve novel problems. Videos serve as an effective medium for this learning process, facilitating a progression through these cognitive stages. However, existing video benchmarks fail to systematically evaluate the <i>knowledge acquisition</i> capabilities in Large Multimodal Models (LMMs). To address this gap, we introduce <strong>Video-MMMU</strong>, a multi-modal, multi-disciplinary benchmark designed to assess LMMs' ability to acquire and utilize knowledge from videos. Video-MMMU features a curated collection of 300 expert-level videos and 900 human-annotated questions across six disciplines, evaluating <i>knowledge acquisition</i> through stage-aligned question-answer pairs: Perception, Comprehension, and Adaptation. A proposed knowledge gain metric, &Delta;<sub>knowledge</sub>, quantifies improvement in performance after video viewing. Evaluation of LMMs reveals a steep decline in performance as cognitive demands increase and highlights a significant gap between human and model knowledge acquisition, underscoring the need for methods to enhance LMMs' capability to learn and adapt from videos. 
 			</p>
 			<br>
 			<div class="image-viewer" style="margin-top: 20px; text-align: center;">
-				<img src="./assets/figures/figure_1.png" alt="Example PDF as Image" style="width: 80%; border-radius: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+				<img src="./assets/figures/figure1_0316.png" alt="Example PDF as Image" style="width: 100%; border-radius: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
 			</div>
 		</div>
 	</section>
@@ -282,20 +282,20 @@
 				We introduce <strong>Video-MMMU</strong>, a multi-modal and multi-disciplinary video benchmark that evaluates LMMs' knowledge acquisition capability from educational videos.
 			</p>
 			<p class="description text-left">
-				<strong>1) Knowledge-intensive Video Collection:</strong><br>
-				Our dataset comprises 300 lecture-style videos spanning 6 professional disciplines: Art, Business, Science, Medicine, Humanities, and Engineering, with 30 subjects distributed among them.
+				<strong>1) Video as a Knowledge Source:</strong><br>
+				Traditional VideoQA benchmarks focus primarily on evaluating how well models interpret visual content. Video-MMMU is the first to treat videos as a <strong>source of knowledge</strong>, assessing how effectively LMMs acquire knowledge from educational videos. Our dataset comprises 300 lecture-style, college-level videos spanning 30 subjects in 6 professional disciplines: Art, Business, Science, Medicine, Humanities, and Engineering.
 			</p>
 			<p class="description text-left">
 				<strong>2) Knowledge Acquisition-based Question Design:</strong><br>
 				Each video includes three question-answer pairs aligned with the three knowledge acquisition stages: Perception (identifying key information related to the knowledge), Comprehension (understanding the underlying concepts), and Adaptation (applying knowledge to new scenarios).
 			</p>
 			<p class="description text-left">
-				<strong>3) Videos as a Knowledge Source</strong><br>
-				Traditional VideoQA benchmarks focus primarily on evaluating how well models interpret visual content. Video-MMMU is the first to treat videos as a <strong>source of knowledge</strong>, assessing how effectively LMMs acquire knowledge from educational videos.
-			</p>
-			<p class="description text-left">
-				<strong>4) Measuring Knowledge Gain: The Δknowledge Metric</strong><br>
-				A key novelty of Video-MMMU is that it evaluates not just a model’s absolute accuracy but also its <strong>delta accuracy</strong>—the improvement in performance after learning from a video. A model may initially fail to solve an exam question, but we give the model a video where a human could learn to solve the question by watching the video. Video-MMMU tests how well LMMs <strong>improve their performance</strong> after watching the videos. Video-MMMU introduces <strong>Δknowledge</strong> to quantify knowledge gain by evaluating a model’s improvement on practice exam questions (Adaptation track) after watching a video.
+				<strong>3) From Absolute Performance towards Learning Efficiency: Δ<sub>knowledge</sub></strong><br>
+				A key novelty of Video-MMMU is that it evaluates not just a model’s absolute accuracy but also its <strong>delta accuracy</strong>—the improvement in performance after learning from a video. A model may initially fail to solve an exam question, but we give the model a video where a human could learn to solve the question by watching the video. Video-MMMU tests how well LMMs <strong>improve their performance</strong> after watching the videos. Video-MMMU introduces Δ<sub>knowledge</sub> to quantify the model's learning gain on the Adaptation track questions.  Δ<sub>knowledge</sub> is defined as the normalized performance gain:
+
+				<div style="text-align: center;">
+					Δ<sub>knowledge</sub> = (Acc<sub>after_video</sub> - Acc<sub>before_video</sub>) / (100% - Acc<sub>before_video</sub>) × 100%
+				</div>
 			</p>
 			<br>
 			<div class="image-viewer" style="margin-top: 20px; text-align: center;">
@@ -599,7 +599,7 @@
 			</p> -->
 			<br>
 			<div class="image-viewer" style="margin-top: 20px; text-align: center;">
-				<img src="./assets/figures/figure_3.png" 
+				<img src="./assets/figures/figure3_0308.png" 
 					alt="Figure 3" 
 					style="width: 80%; border-radius: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
 			</div>    
