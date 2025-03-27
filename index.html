@@ -291,7 +291,7 @@
 			</p>
 			<p class="description text-left">
 				<strong>3) From Absolute Performance towards Learning Efficiency: Δ<sub>knowledge</sub></strong><br>
-				A key novelty of Video-MMMU is that it evaluates not just a model’s absolute accuracy but also its <strong>delta accuracy</strong>—the improvement in performance after learning from a video. A model may initially fail to solve an exam question, but we give the model a video where a human could learn to solve the question by watching the video. Video-MMMU tests how well LMMs <strong>improve their performance</strong> after watching the videos. Video-MMMU introduces Δ<sub>knowledge</sub> to quantify the model's learning gain on the Adaptation track questions.  Δ<sub>knowledge</sub> is defined as the normalized performance gain:
+				A key novelty of Video-MMMU is that it evaluates not only a model’s final accuracy but also its <strong>delta accuracy</strong>—the improvement in performance after learning from a video. A model may initially fail to solve an exam question, but we give the model a video where a human could learn to solve the question by watching the video. Video-MMMU tests how well LMMs <strong>improve their performance</strong> after watching the videos. Video-MMMU introduces Δ<sub>knowledge</sub> to quantify the model's learning gain on the Adaptation track questions.  Δ<sub>knowledge</sub> is defined as the normalized performance gain:
 
 				<div style="text-align: center;">
 					Δ<sub>knowledge</sub> = (Acc<sub>after_video</sub> - Acc<sub>before_video</sub>) / (100% - Acc<sub>before_video</sub>) × 100%
